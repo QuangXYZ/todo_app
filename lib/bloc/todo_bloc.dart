@@ -27,7 +27,7 @@ class TodoBloc extends BaseBloc {
   _addTodo(Todo todo) async {
     await todoTable.insertTodo(todo);
     _listData.insert(0, todo);
-.    eventController.sink.add(_listData);
+    eventController.sink.add(_listData);
   }
 
   _deleteTodo(Todo? todo) async {
